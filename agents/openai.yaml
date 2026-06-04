@@ -1,0 +1,4 @@
+interface:
+  display_name: "Reference Video Remix"
+  short_description: "Reference video to finished product video"
+  default_prompt: "Use $reference-video-remix to turn this reference link or script into a new product video with storyboard, licensed music, voiceover, Remotion render, and verification."
