@@ -14,6 +14,9 @@ Use this with the `remotion` skill for React video production. Use `imagegen` wh
 ## Operating Rules
 
 - Treat the reference as inspiration and analysis input, not source footage to clone frame-for-frame unless the user owns it or explicitly provides rights.
+- When the user provides a screenshot or frame, perform frame-first analysis before proposing a concept. Describe the visible layout, color, subject, motion implications, typography, and audio/text behavior from the frame itself. Do not replace an abstract UI reference with a live-action scenario just because the target product has a scenario.
+- Classify the reference style before production: `abstract-ui`, `live-action-scenario`, `kinetic-typography`, `screen-recording`, `diagram-demo`, or `mixed`. Let this classification drive the storyboard.
+- For `abstract-ui` references, preserve the visual grammar: procedural shapes, color field, UI bars, captions, waveform/orb behavior, and scrolling text. Use generated scene images only if the reference actually depends on photographic scenes.
 - If a URL is blocked by login, anti-bot, region, or playback restrictions, try available browser tools or screenshots before calling it unresolved. Record exactly what was verified and what was blocked.
 - Never claim music is "copyright-free" unless the source says so. Prefer "royalty-free", "licensed for this use", or the platform's exact license wording.
 - Store source links, license notes, track name, artist, and local asset paths in project notes.
@@ -65,6 +68,8 @@ Use the least fragile path first:
 
 Write `notes/breakdown.md` with:
 
+- reference style classification and why
+- frame-level facts before interpretation
 - hook, scene sequence, pacing, transitions
 - visual palette, typography style, card/layout grammar
 - audio structure: narration, dialogue, music, sound effects, silence
@@ -84,6 +89,15 @@ Write `notes/storyboard.md` before production. Include:
 - image generation prompts when needed
 
 Keep product videos dense and specific: show the actual scenario, UI, user, or workflow. Avoid generic landing-page hero pacing when the target is a short ad or social video.
+
+For abstract voice UI videos, storyboard the motion system rather than inventing live-action scenes:
+
+- central orb / waveform / avatar behavior
+- transcript scroll behavior
+- speaker identity markers
+- background treatment and grain
+- brand header and CTA treatment
+- music/voice ducking
 
 ### 4. Visual Asset Production
 
