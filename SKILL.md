@@ -14,6 +14,7 @@ Use this with the `remotion` skill for React video production. Use `imagegen` wh
 ## Operating Rules
 
 - Treat the reference as inspiration and analysis input, not source footage to clone frame-for-frame unless the user owns it or explicitly provides rights.
+- Derive the target product, product line, CTA, and claim hierarchy fresh for every job. Do not carry over the previous video's product focus. For example, do not default Tencent RTC work to Conversational AI unless the current brief, script, URL, or user request says so.
 - When the user provides a screenshot or frame, perform frame-first analysis before proposing a concept. Describe the visible layout, color, subject, motion implications, typography, and audio/text behavior from the frame itself. Do not replace an abstract UI reference with a live-action scenario just because the target product has a scenario.
 - Classify the reference style before production: `abstract-ui`, `live-action-scenario`, `kinetic-typography`, `screen-recording`, `diagram-demo`, or `mixed`. Let this classification drive the storyboard.
 - For `abstract-ui` references, preserve the visual grammar: procedural shapes, color field, UI bars, captions, waveform/orb behavior, and scrolling text. Use generated scene images only if the reference actually depends on photographic scenes.
@@ -51,11 +52,13 @@ If the repository already has an `AGENTS.md`, follow it. If creating a new job f
 Collect or infer:
 
 - reference link(s), screenshots, or spreadsheet/script files
-- target product, landing URL, CTA, brand name, and required claims
+- target product/product line, landing URL, CTA, brand name, and required claims
 - language, voice style, aspect ratio, platform, target duration
 - whether the output needs full narration, sparse dialogue, subtitles, or music-only sections
 
 If the product claims are current or external, verify them from official pages before using metrics, URLs, pricing, features, or compliance-sensitive language.
+
+For brand families such as Tencent RTC, separate the parent brand from the specific product focus. The product focus may be broad brand awareness or a specific offer such as Conversational AI, video calling, live streaming, chat, voice, conferencing, call center/customer service, or another RTC scenario. If the user only says the parent brand and the target product cannot be inferred from the supplied script or URL, ask for the product focus or make a brand-level video without naming a narrower product.
 
 ### 2. Reference Access And Breakdown
 
@@ -81,6 +84,7 @@ Write `notes/breakdown.md` with:
 Write `notes/storyboard.md` before production. Include:
 
 - exact duration, FPS, resolution
+- product focus: parent brand, specific product/offer, CTA, and any excluded assumptions
 - scene timeline with start/end times
 - scene purpose and on-screen copy
 - voiceover or dialogue script
